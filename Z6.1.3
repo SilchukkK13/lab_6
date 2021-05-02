@@ -1,0 +1,23 @@
+ /*   Name:Project6.1.3
+   Author: Kostya Silchuk, group 109.
+   Description:Laboratory work N 6 Development of programs using two-dimensional arrays/ variant 13*/  
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+int main()
+ {  int n,j,m,jmin,a;
+   cin>>n;
+   float**mas =new float*[n];
+   for(int i=0;i<n; i++)
+   mas[i]=new float[n];
+   for(int i=0;i<n;i++){
+{  jmin <j;  jmin=1;}
+  for(j=1;j<m;j++)
+ { if(j>jmin)
+  jmin=j;}
+{  cout<<"\n\nmin="<<jmin<<"index col="<<j;}
+       delete[]mas[i];delete[]mas;
+}    
+   return 0;
+}
