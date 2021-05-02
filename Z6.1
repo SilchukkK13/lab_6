@@ -1,0 +1,40 @@
+/*   Name:Project 6(1)
+   Author: Kostya Silchuk, group 109.
+   Description:Laboratory work N 6 Development of programs using two-dimensional arrays/ variant 13*/
+#include <iostream>
+#include <locale.h>
+#include <stdlib.h>
+#include <iomanip>
+#define N10
+using namespace std;
+int main() 
+{ setlocale (0,".1251");
+const int N=9,M=9;
+int n,m,stk; 
+int mt;
+int a=0,b=0;
+cout<<"\n������  ���������� ������ n � m^\n ";
+cin>>n>>m;
+cout<<"\n n="<<n<<"m="<<m;
+cout<<"\n\n ������ ������� ��������� � � �:\n";
+cin>>a>>b;
+cout<<"\n a="<<a<<"b="<<b;
+for(int i=0; i<N;i++)
+for(int j=0; j<M; j++)
+mt=rand()%(b-a)+a;
+printf("%5d",mt);
+{
+    int row_2,col_0, x,y;
+x=row_2; 
+y=col_0;
+stk = x;
+x = y;
+y=stk;
+cout<<"\n ������������ �����:\n"<<mt<<"\t";
+for(int i=0;i<N;i++)
+for(int j=0;j<M;j++) 
+cout<<" "<<mt;
+cout<<"\t";
+}
+return 0;
+}
