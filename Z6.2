@@ -1,0 +1,65 @@
+  /*   Name:Project 6.2
+   Author: Kostya Silchuk, group 109.
+   Description:Laboratory work N 6 Development of programs using two-dimensional arrays/ variant 13*/
+    #include <iostream>
+    #include <new.h>
+    #include <stdlib.h>
+    #include <iomanip>
+    #include <conio.h>
+    using namespace std;
+    int main ()
+  { 
+    int n,m, a=0,b=0;
+    cout<<"\nEnter the dimensions of the array n and m:\n";
+    cin>>n>>m;
+    cout<<"n="<<n<<"m="<<m;
+	while (a>=b)
+	{
+	cout<<"\nEnter the interval limits a and b:\n";
+	cin>>a>>b;
+    cout<<"a="<<a<<"b="<<b;
+}
+   int** arr = new int*[n];
+    cout<<"\nInitial array:\n";
+    for (int i=0;i<n;i++)
+    arr[i] = new int[m];
+    cout<<"\n";
+    for (int j=0;j<m;j++)
+{   
+    arr[n][m]=rand()%(b-a)+a;
+    cout<<arr[n]<<arr[m];
+    }
+    float** brr = new float*[3];
+    for (int i=0;i<3;i++)
+    brr[i] = new float[m];
+    for (int j=0;j<m;j++)
+{ 
+    int min=a;
+    int max=b; 
+    float s=0; 
+    for (int i=0;i<n;i++)
+{
+    if (arr[i][j]>max) max = arr[i][j];
+    if (arr[i][j]<min) min = arr[i][j];
+	s+= arr[i][j];
+}
+    s= s/n; 
+    brr[0][j] = max;
+    brr[1][j] = s;
+    brr[2][j] = min;
+    cout<<"\n s="<<s<<"\n max="<<max<<"\n min="<<min;
+   }
+    cout<<"\nThe resulting array \n";
+    for (int i=0;i<3;i++)
+{
+    cout<<"\n";
+    for (int j=0;j<m;j++)
+    if (i==1) 
+	cout<<brr[i][j]<<"\t";
+    else 
+	cout<<brr[i][j]<<"\t";
+}
+    delete[] arr;
+    delete[] brr;
+    return 0;
+}
